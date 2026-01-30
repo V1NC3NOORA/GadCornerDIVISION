@@ -96,9 +96,30 @@ a:hover {
   gap: 0.75rem;
   flex: 1;
 }
+
+/* Allow flex children to shrink on small screens to avoid overflow */
+.header-left,
+.header-right,
+.header-info,
+.nav-container {
+  min-width: 0;
+}
+
+.header-info {
+  overflow: hidden;
+}
+
+.header-info .header-title-small,
+.header-info .header-title-main {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
   background-attachment: fixed;
 .header-logo-main {
-  height: 56px;
+  height: auto;
+  max-height: 56px;
+  max-width: 220px;
   width: auto;
   display: inline-block;
   object-fit: contain;
@@ -171,9 +192,16 @@ a:hover {
 }
 
 .header-logo-side {
-  height: 50px;
+  height: auto;
+  max-height: 50px;
   width: auto;
   object-fit: contain;
+}
+
+/* constrain logos inside header logos container */
+.header-logos-right img {
+  max-height: 48px;
+  width: auto;
 }
 
 /* Mobile menu toggle */
@@ -842,11 +870,11 @@ a:hover {
   }
 
   .header-logo-main {
-    height: 48px;
+    max-height: 48px;
   }
 
   .header-logo-side {
-    height: 40px;
+    max-height: 40px;
   }
 
   .header-title-small {
@@ -1037,13 +1065,34 @@ a:hover {
   }
 
   .header-logo-main {
-    height: 40px;
+    max-height: 40px;
   }
 
   .header-logo-side {
-    height: 32px;
+    max-height: 32px;
   }
 
+
+/* Tablet and Desktop: stricter constraints for division logo */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-logo-main {
+    max-height: 44px;
+    max-width: 160px;
+  }
+  .header-logos-right img {
+    max-height: 40px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header-logo-main {
+    max-height: 48px;
+    max-width: 180px;
+  }
+  .header-logos-right img {
+    max-height: 48px;
+  }
+}
   .header-title-small {
     font-size: 0.6rem;
   }
