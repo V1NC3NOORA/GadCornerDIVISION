@@ -169,6 +169,36 @@ a:hover {
   object-fit: contain;
 }
 
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mobile-menu-toggle .hamburger {
+  display: inline-block;
+  width: 26px;
+  height: 18px;
+  position: relative;
+}
+.mobile-menu-toggle .hamburger span {
+  display: block;
+  height: 2px;
+  background: #4c1d95;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* When menu is open change styles */
+.nav-menu.mobile-open {
+  display: flex;
+}
+
 .site-navigation {
   background: linear-gradient(to right, #A78BFA 0%, #C4B5FD 50%, #DDD6FE 100%);
   border-top: 1px solid rgba(139, 92, 246, 0.1);
@@ -825,6 +855,16 @@ a:hover {
     width: 100%;
   }
 
+  .mobile-menu-toggle {
+    display: inline-flex;
+    position: absolute;
+    right: 1rem;
+    top: 0.9rem;
+    z-index: 60;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+  }
+
   .search-input {
     width: 100%;
   }
@@ -832,6 +872,7 @@ a:hover {
   .nav-menu {
     gap: 0;
     flex-direction: column;
+    display: none;
   }
 
   .nav-menu li {
@@ -868,6 +909,11 @@ a:hover {
     opacity: 1;
     visibility: visible;
     max-height: 500px;
+  }
+
+  .nav-menu.mobile-open {
+    display: flex;
+    flex-direction: column;
   }
 
   .panel-content {

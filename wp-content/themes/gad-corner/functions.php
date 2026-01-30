@@ -5,6 +5,7 @@ function gad_corner_scripts() {
     wp_enqueue_script( 'gad-corner-carousel', get_template_directory_uri() . '/assets/js/carousel.js', array(), '1.0.0', true );
     wp_enqueue_script( 'gad-corner-dashboard', get_template_directory_uri() . '/assets/js/dashboard.js', array(), '1.0.0', true );
     wp_enqueue_script( 'gad-corner-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'gad-corner-mobile', get_template_directory_uri() . '/assets/js/mobile-menu.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'gad_corner_scripts' );
 
