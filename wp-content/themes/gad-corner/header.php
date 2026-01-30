@@ -32,9 +32,17 @@
             </div>
         </div>
 
-        <nav class="site-navigation">
+        <button class="mobile-menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <nav class="site-navigation" role="navigation" aria-label="Primary Menu">
             <div class="nav-container">
-                <ul class="nav-menu">
+                <ul id="primary-menu" class="nav-menu">
                     <li class="nav-item">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-link">
                             <span class="nav-icon">🏠</span> Home
