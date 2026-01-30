@@ -32,6 +32,13 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
   box-sizing: border-box;
 }
 
+/* Ensure media scale down on small screens to avoid overflow */
+img, picture, video, iframe, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-dark);
@@ -299,7 +306,7 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  min-width: 600px;
+  min-width: 0;
 }
 
 .panel-column h4 {
@@ -868,6 +875,21 @@ a:hover {
   /* Make background-attachment behave on mobile to avoid performance issues */
   .header-hero {
     background-attachment: scroll;
+    min-height: 180px;
+    padding: 1.25rem 0;
+    background-position: center;
+    border-radius: 12px;
+    margin: 0.75rem;
+  }
+
+  /* Reduce hero margins and container padding on small screens to avoid horizontal cutoff */
+  .hero-banner {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 
   /* Mobile nav overlay */
