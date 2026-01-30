@@ -1,7 +1,4 @@
 <?php
-/**
- * Footer Template
- */
 ?>
     </main>
     

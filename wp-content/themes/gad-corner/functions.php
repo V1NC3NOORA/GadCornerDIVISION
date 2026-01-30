@@ -1,9 +1,5 @@
 <?php
-/**
- * Functions for GAD Corner Theme
- */
 
-// Enqueue styles and scripts
 function gad_corner_scripts() {
     wp_enqueue_style( 'gad-corner-style', get_stylesheet_uri(), array(), '1.0.0' );
     wp_enqueue_script( 'gad-corner-carousel', get_template_directory_uri() . '/assets/js/carousel.js', array(), '1.0.0', true );
@@ -12,7 +8,6 @@ function gad_corner_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'gad_corner_scripts' );
 
-// Add theme support
 function gad_corner_theme_support() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
@@ -21,7 +16,6 @@ function gad_corner_theme_support() {
 }
 add_action( 'after_setup_theme', 'gad_corner_theme_support' );
 
-// Register menus
 function gad_corner_register_menus() {
     register_nav_menus( array(
         'primary' => esc_html__( 'Primary Menu', 'gad-corner' ),
@@ -29,7 +23,6 @@ function gad_corner_register_menus() {
 }
 add_action( 'init', 'gad_corner_register_menus' );
 
-// Get dashboard statistics
 function get_gad_statistics() {
     return array(
         'total_teachers' => 145,
@@ -43,7 +36,6 @@ function get_gad_statistics() {
     );
 }
 
-// Custom post types
 function gad_corner_custom_post_types() {
     register_post_type( 'gad_program', array(
         'labels' => array(

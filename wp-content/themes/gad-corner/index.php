@@ -1,12 +1,8 @@
 <?php
-/**
- * Main Template File
- */
 
 get_header();
 ?>
 
-<!-- Hero Banner Section -->
 <section class="hero-banner">
     <div class="hero-banner-content">
         <h2>Gender and Development Corner</h2>
@@ -14,7 +10,6 @@ get_header();
     </div>
 </section>
 
-<!-- Carousel Section -->
 <section class="carousel-section">
     <div class="carousel-wrapper">
         <div class="carousel-track" id="carouselTrack">
@@ -49,12 +44,10 @@ get_header();
     </div>
 </section>
 
-<!-- Dashboard Section -->
 <section class="dashboard-section">
     <div class="container">
         <h2 class="section-title">Dashboard Overview</h2>
         
-        <!-- Stats Cards -->
         <div class="stats-grid">
             <div class="stat-card teachers">
                 <div class="stat-label">Total Teachers</div>
@@ -87,7 +80,6 @@ get_header();
             </div>
         </div>
 
-        <!-- Gender Breakdown -->
         <div class="gender-breakdown">
             <h3>👥 Gender Distribution</h3>
             <div class="gender-stats">
@@ -120,7 +112,6 @@ get_header();
             </div>
         </div>
 
-        <!-- Programs Section -->
         <div class="programs-section">
             <h3 style="color: var(--primary-violet); font-size: 1.25rem; margin-bottom: 1.5rem;">
                 🎯 Active GAD Programs

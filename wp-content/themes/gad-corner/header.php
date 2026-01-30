@@ -1,7 +1,4 @@
 <?php
-/**
- * Header Template
- */
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -16,7 +13,6 @@
     <header class="site-header">
         <div class="header-overlay-accent"></div>
         <div class="header-container">
-            <!-- Left: Logo and Department Info -->
             <div class="header-left">
                 <img src="<?php echo esc_url( get_template_directory_uri() . '/imgs/pngs/R8Clogo.png' ); ?>" alt="Department of Education Logo" class="header-logo-main" />
                 <div class="header-info">
@@ -25,7 +21,6 @@
                 </div>
             </div>
 
-            <!-- Right: Search and Logos -->
             <div class="header-right">
                 <div class="header-search">
                     <input type="text" placeholder="Search..." class="search-input" />
@@ -37,7 +32,6 @@
             </div>
         </div>
 
-        <!-- Navigation Menu -->
         <nav class="site-navigation">
             <div class="nav-container">
                 <ul class="nav-menu">
